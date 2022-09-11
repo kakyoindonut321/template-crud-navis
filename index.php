@@ -7,6 +7,8 @@ $username = $variant[1];
 $password = $variant[2];
 $dbname = $variant[3];
 
+mysqli_report(MYSQLI_REPORT_OFF);
+
 $link = new mysqli($servername, $username, $password);
 if (!$link) {
     die('Could not connect: ' . $link->connect_error);
